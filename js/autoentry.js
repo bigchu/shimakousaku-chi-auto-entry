@@ -57,12 +57,10 @@ fncs = [
     var fn;
 
     console.log('entry...');
-    page.render(num + '_shima.png');
     fn = 'arr = document.getElementById("form1"); arr.elements["select_ans"].value = "46"; arr.elements["mode"].value = "send"; arr.elements["contest_id"].value = "1"; arr.submit();';
     page.evaluate(new Function(fn));
   }, function(parent) {
     console.log('entry complate!');
-    page.render(num + '_shima_done.png');
     console.log('done: (' + (num + 1) + '/' + max + ')');
     page.clearCookies();
     page.open(home_url);
