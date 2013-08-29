@@ -5,7 +5,7 @@
 # Entry number
 num = 0
 end = 0
-max = 10
+max = 10000
 _fncs = []
 home_url = 'http://tamagotch.channel.or.jp/event/event_anniversarycontest/'
 f = ->
@@ -59,12 +59,14 @@ fncs = [
         return
     ,
     (parent) ->
+
+        ###
         console.log 'open entry'
         fn = 'arr = document.getElementById("form1"); arr.elements["select_ans"].value = "46"; arr.elements["mode"].value = "conf"; arr.elements["contest_id"].value = "1"; arr.submit();'
         page.evaluate new Function(fn)
         return
-    ,
-    (parent) ->
+        ###
+
         console.log 'entry...'
         # page.render num + '_shima.png'
         fn = 'arr = document.getElementById("form1"); arr.elements["select_ans"].value = "46"; arr.elements["mode"].value = "send"; arr.elements["contest_id"].value = "1"; arr.submit();'

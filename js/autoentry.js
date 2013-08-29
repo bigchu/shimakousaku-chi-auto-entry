@@ -4,7 +4,7 @@ num = 0;
 
 end = 0;
 
-max = 10;
+max = 10000;
 
 _fncs = [];
 
@@ -48,12 +48,13 @@ fncs = [
     console.log('--------------- Shimakousaku-chi Entry ' + num + ' ---------------');
     page.open(home_url);
   }, function(parent) {
-    var fn;
+    /*
+    console.log 'open entry'
+    fn = 'arr = document.getElementById("form1"); arr.elements["select_ans"].value = "46"; arr.elements["mode"].value = "conf"; arr.elements["contest_id"].value = "1"; arr.submit();'
+    page.evaluate new Function(fn)
+    return
+    */
 
-    console.log('open entry');
-    fn = 'arr = document.getElementById("form1"); arr.elements["select_ans"].value = "46"; arr.elements["mode"].value = "conf"; arr.elements["contest_id"].value = "1"; arr.submit();';
-    page.evaluate(new Function(fn));
-  }, function(parent) {
     var fn;
 
     console.log('entry...');
